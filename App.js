@@ -32,7 +32,7 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <View style={{ flexGrow: 1, alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={styles.welcome}>You are here </Text>
+          <Text style={styles.welcome}>You are here hhh </Text>
           <Text>Latitude: {this.state.latitude}</Text>
           <Text>Longitude: {this.state.longitude}</Text>
           {this.state.error ? <Text>Error: {this.state.error}</Text> : null}
