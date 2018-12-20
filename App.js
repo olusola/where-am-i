@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-export default class App extends Component {
+import codePush from "react-native-code-push";
+let codePushOptions = { checkFrequency: codePush.CheckFrequency.ON_APP_RESUME };
+
+class App extends Component {
   constructor (props) {
     super(props)
 
@@ -32,7 +35,7 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <View style={{ flexGrow: 1, alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={styles.welcome}>You are here hhh </Text>
+          <Text style={styles.welcome}>You are here </Text>
           <Text>Latitude: {this.state.latitude}</Text>
           <Text>Longitude: {this.state.longitude}</Text>
           {this.state.error ? <Text>Error: {this.state.error}</Text> : null}
@@ -42,6 +45,7 @@ export default class App extends Component {
   }
 }
 
+export default codePush(codePushOptions)(App)
 const styles = StyleSheet.create({
   container: {
     flex: 1,
