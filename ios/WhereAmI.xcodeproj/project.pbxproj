@@ -1342,7 +1342,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.olusola.whereami;
+				PRODUCT_BUNDLE_IDENTIFIER = com.olusola.testproject;
 				PRODUCT_NAME = WhereAmI;
 				PROVISIONING_PROFILE_SPECIFIER = olusola;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1374,7 +1374,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.olusola.whereami;
+				PRODUCT_BUNDLE_IDENTIFIER = com.olusola.testproject;
 				PRODUCT_NAME = WhereAmI;
 				PROVISIONING_PROFILE_SPECIFIER = olusola;
 				VERSIONING_SYSTEM = "apple-generic";
