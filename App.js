@@ -23,7 +23,7 @@ class App extends Component {
       })
     },
     (error) => this.setState({ error: error.message }),
-    { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 }
+    { enableHighAccuracy: true, timeout: 20000, maximumAge: 0 }
     )
   }
 
@@ -35,9 +35,9 @@ class App extends Component {
     return (
       <View style={styles.container}>
         <View style={{ flexGrow: 1, alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={styles.welcome}>Your Coordinates are</Text>
-          <Text>Latitude: {this.state.latitude}</Text>
-          <Text>Longitude: {this.state.longitude}</Text>
+          <Text style={styles.introText}>My GPS Coordinates</Text>
+          <Text style={styles.coordText}>Latitude: {this.state.latitude}</Text>
+          <Text style={styles.coordText}>Longitude: {this.state.longitude}</Text>
           {this.state.error ? <Text>Error: {this.state.error}</Text> : null}
         </View>
       </View>
@@ -53,4 +53,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#ffffff',
   },
+  introText: {
+    fontSize: 20,
+    fontWeight: '700',
+    padding: 10
+  },
+  coordText: {
+    fontSize: 20,
+    fontWeight: '300',
+    padding: 5
+  }
 });
