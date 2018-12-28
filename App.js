@@ -17,8 +17,8 @@ class App extends Component {
   componentDidMount() {
     navigator.geolocation.watchPosition((position) => {
       this.setState({
-        latitude: position.coords.latitude,
-        longitude: position.coords.longitude,
+        latitude: position.coords.latitude.toFixed(4),
+        longitude: position.coords.longitude.toFixed(4),
         error: null
       })
     },
